@@ -10,28 +10,28 @@ export default function Index({ data }) {
     return (
         <>
             <Head>
-                <title>Sejarah Karangjati | Kelurahan Karangjati</title>
+                <title>Sejarah Karanganyar | Kelurahan Karanganyar</title>
                 <meta
                     name="description"
-                    content="Pelajari sejarah dan perkembangan Kelurahan Karangjati, Kabupaten Sragen. Temukan informasi menarik tentang asal-usul dan perkembangan wilayah ini."
+                    content="Pelajari sejarah dan perkembangan Kelurahan Karanganyar, Kabupaten Karanganyar. Temukan informasi menarik tentang asal-usul dan perkembangan wilayah ini."
                 />
                 <meta
                     name="keywords"
-                    content="Sejarah Karangjati, Kabupaten Sragen, asal-usul, sejarah, perkembangan"
+                    content="Sejarah Karanganyar, Kabupaten Karanganyar, asal-usul, sejarah, perkembangan"
                 />
-                <meta name="author" content="karangjatih" />
+                <meta name="author" content="Karanganyarh" />
                 <meta name="robots" content="index, follow" />
                 <meta
                     property="og:title"
-                    content="Sejarah Karangjati | Kelurahan Karangjati"
+                    content="Sejarah Karanganyar | Kelurahan Karanganyar"
                 />
                 <meta
                     property="og:description"
-                    content="Pelajari sejarah dan perkembangan Kelurahan Karangjati, Kabupaten Sragen. Temukan informasi menarik tentang asal-usul dan perkembangan wilayah ini."
+                    content="Pelajari sejarah dan perkembangan Kelurahan Karanganyar, Kabupaten Karanganyar. Temukan informasi menarik tentang asal-usul dan perkembangan wilayah ini."
                 />
                 <meta
                     property="og:image"
-                    content="/images/balai-karangjati.jpg"
+                    content="/images/balai-Karanganyar.jpg"
                 />
                 <meta
                     property="og:url"
@@ -41,15 +41,15 @@ export default function Index({ data }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta
                     name="twitter:title"
-                    content="Sejarah Karangjati | Kelurahan Karangjati"
+                    content="Sejarah Karanganyar | Kelurahan Karanganyar"
                 />
                 <meta
                     name="twitter:description"
-                    content="Pelajari sejarah dan perkembangan Kelurahan Karangjati, Kabupaten Sragen. Temukan informasi menarik tentang asal-usul dan perkembangan wilayah ini."
+                    content="Pelajari sejarah dan perkembangan Kelurahan Karanganyar, Kabupaten Karanganyar. Temukan informasi menarik tentang asal-usul dan perkembangan wilayah ini."
                 />
                 <meta
                     name="twitter:image"
-                    content="/images/balai-karangjati.jpg"
+                    content="/images/balai-Karanganyar.jpg"
                 />
                 <link
                     rel="canonical"

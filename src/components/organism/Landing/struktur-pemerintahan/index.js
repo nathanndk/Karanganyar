@@ -153,7 +153,10 @@ const OrganizationalChart = ({ data }) => (
     lineBorderRadius={"10px"}
     label={
       <StyledNode>
-        <img src={data.image || "/user_avatar_placeholder.png"} alt={data.name} />
+        <img
+          src={data.image || "/user_avatar_placeholder.png"}
+          alt={data.name}
+        />
         <div className="name">{data.name}</div>
         <div className="position">{data.position}</div>
       </StyledNode>
@@ -165,7 +168,10 @@ const OrganizationalChart = ({ data }) => (
           key={index}
           label={
             <StyledNode>
-              <img src={child.image || "/user_avatar_placeholder.png"} alt={child.name} />
+              <img
+                src={child.image || "/user_avatar_placeholder.png"}
+                alt={child.name}
+              />
               <div className="name">{child.name}</div>
               <div className="position">{child.position}</div>
             </StyledNode>
@@ -177,7 +183,10 @@ const OrganizationalChart = ({ data }) => (
                 key={index}
                 label={
                   <StyledNode>
-                    <img src={grandChild.image || "/user_avatar_placeholder.png"} alt={grandChild.name} />
+                    <img
+                      src={grandChild.image || "/user_avatar_placeholder.png"}
+                      alt={grandChild.name}
+                    />
                     <div className="name">{grandChild.name}</div>
                     <div className="position">{grandChild.position}</div>
                   </StyledNode>
