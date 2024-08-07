@@ -14,13 +14,12 @@ const TreeNode = dynamic(
 
 // Styled component for the nodes
 const StyledNode = styled.div`
-  padding: 8px;
   border-radius: 12px;
   display: inline-block;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   width: 100px;
   max-width: 100%;
   word-wrap: break-word;
@@ -28,17 +27,17 @@ const StyledNode = styled.div`
   img {
     border-radius: 12px;
     width: 100%;
-    height: auto;
+    height: 125px;
   }
 
   .name {
     font-weight: bold;
     margin: 8px 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .position {
-    font-size: 0.75em;
+    font-size: 0.8em;
     color: #555;
   }
 
@@ -198,39 +197,39 @@ const OrganizationalChart = ({ data }) => (
   </Tree>
 );
 
-const AdditionalInfo = ({ data }) => {
-  const members = extractMembers(data);
+// const AdditionalInfo = ({ data }) => {
+//   const members = extractMembers(data);
 
-  return (
-    <div className="mt-8 px-4 md:px-16">
-      <h2 className="text-xl lg:text-2xl font-bold text-center text-black dark:text-white">
-        Informasi Tambahan
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        {members.map((member, index) => (
-          <div
-            key={index}
-            className="flex items-center rounded-lg shadow-md bg-white p-4"
-          >
-            <div className="w-1/3 h-full">
-              <img
-                src={member.image || "/user_avatar_placeholder.png"}
-                alt={member.name}
-                className="rounded-lg h-full w-full object-cover"
-              />
-            </div>
-            <div className="w-2/3 pl-4">
-              <p className="font-semibold text-lg">{member.name}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                {member.position}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="mt-8 px-4 md:px-16">
+//       <h2 className="text-xl lg:text-2xl font-bold text-center text-black dark:text-white">
+//         Informasi Tambahan
+//       </h2>
+//       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+//         {members.map((member, index) => (
+//           <div
+//             key={index}
+//             className="flex items-center rounded-lg shadow-md bg-white p-4"
+//           >
+//             <div className="w-1/3 h-full">
+//               <img
+//                 src={member.image || "/user_avatar_placeholder.png"}
+//                 alt={member.name}
+//                 className="rounded-lg h-full w-full object-cover"
+//               />
+//             </div>
+//             <div className="w-2/3 pl-4">
+//               <p className="font-semibold text-lg">{member.name}</p>
+//               <p className="text-sm text-gray-600 dark:text-gray-300">
+//                 {member.position}
+//               </p>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
 // Function to extract all members
 const extractMembers = (data, members = []) => {
@@ -245,14 +244,16 @@ const extractMembers = (data, members = []) => {
 
 export default function Index() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl lg:text-4xl font-bold mt-12 mb-5 text-center text-black dark:text-white">
-        Struktur <span className="text-orange-500">Pemerintahan</span>
-      </h1>
-      <div className="overflow-x-auto">
-        <OrganizationalChart data={orgChartData[0]} />
+    <div className="bg-gray-100">
+      <div className="container mx-auto px-4 py-10">
+        <h1 className="text-2xl lg:text-4xl font-bold mt-12 mb-5 text-center text-black dark:text-white">
+          Struktur <span className="text-orange-500">Pemerintahan</span>
+        </h1>
+        <div className="overflow-x-auto">
+          <OrganizationalChart data={orgChartData[0]} />
+        </div>
+        {/* <AdditionalInfo data={orgChartData[0]} /> */}
       </div>
-      <AdditionalInfo data={orgChartData[0]} />
     </div>
   );
 }

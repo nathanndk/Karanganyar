@@ -1,5 +1,5 @@
 import { Dropdown } from "flowbite-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
@@ -36,7 +36,7 @@ export default function Index() {
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
           aria-controls="navbar-dropdown"
           aria-expanded="false"
           onClick={() => {
@@ -55,8 +55,8 @@ export default function Index() {
             <li>
               <Link
                 href="/"
-                className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                  isActive("/") ? "text-black font-bold" : ""
+                className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                  isActive("/") ? "text-orange-500 font-bold" : ""
                 }`}
                 aria-current="page"
               >
@@ -76,7 +76,7 @@ export default function Index() {
                           "/visi-misi",
                           "/sejarah",
                         ])
-                          ? "text-black font-bold"
+                          ? "text-orange-500 font-bold"
                           : "text-gray-900 dark:text-white"
                       }`}
                     >
@@ -88,7 +88,7 @@ export default function Index() {
                     <Dropdown.Item
                       className={
                         isActive("/struktur-pemerintahan")
-                          ? "text-black font-bold"
+                          ? "text-orange-500 font-bold"
                           : ""
                       }
                     >
@@ -98,7 +98,9 @@ export default function Index() {
                   <Link href="/visi-misi">
                     <Dropdown.Item
                       className={
-                        isActive("/visi-misi") ? "text-black font-bold" : ""
+                        isActive("/visi-misi")
+                          ? "text-orange-500 font-bold"
+                          : ""
                       }
                     >
                       Visi Misi
@@ -107,7 +109,7 @@ export default function Index() {
                   <Link href="/sejarah">
                     <Dropdown.Item
                       className={
-                        isActive("/sejarah") ? "text-black font-bold" : ""
+                        isActive("/sejarah") ? "text-orange-500 font-bold" : ""
                       }
                     >
                       Sejarah
@@ -117,12 +119,16 @@ export default function Index() {
               </div>
             </li>
             <li className="block lg:hidden">
-              <div className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">
+              <div className="block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white">
                 <Disclosure>
                   <Disclosure.Button
                     className={`${
-                      isDropdownActive(["/sejarah", "/visi-misi", "/sejarah"])
-                        ? "text-black font-bold"
+                      isDropdownActive([
+                        "/struktur-pemerintahan",
+                        "/visi-misi",
+                        "/sejarah",
+                      ])
+                        ? "text-orange-500 font-bold"
                         : "text-gray-900 dark:text-white"
                     }`}
                   >
@@ -131,24 +137,28 @@ export default function Index() {
                   <Disclosure.Panel className="text-gray-500">
                     <Link
                       href="/struktur-pemerintahan"
-                      className={`block py-3 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                        isActive("/sejarah") ? "text-black font-bold" : ""
+                      className={`block py-3 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                        isActive("/struktur-pemerintahan")
+                          ? "text-orange-500 font-bold"
+                          : ""
                       }`}
                     >
                       Struktur Pemerintahan
                     </Link>
                     <Link
                       href="/visi-misi"
-                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                        isActive("/visi-misi") ? "text-black font-bold" : ""
+                      className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                        isActive("/visi-misi")
+                          ? "text-orange-500 font-bold"
+                          : ""
                       }`}
                     >
                       Visi & Misi
                     </Link>
                     <Link
                       href="/sejarah"
-                      className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                        isActive("/sejarah") ? "text-black font-bold" : ""
+                      className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                        isActive("/sejarah") ? "text-orange-500 font-bold" : ""
                       }`}
                     >
                       Sejarah
@@ -160,8 +170,8 @@ export default function Index() {
             <li>
               <Link
                 href="/kelembagaan"
-                className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                  isActive("/kelembagaan") ? "text-black font-bold" : ""
+                className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                  isActive("/kelembagaan") ? "text-orange-500 font-bold" : ""
                 }`}
               >
                 Kelembagaan
@@ -170,8 +180,8 @@ export default function Index() {
             <li>
               <Link
                 href="/potensi"
-                className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                  isActive("/potensi") ? "text-black font-bold" : ""
+                className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                  isActive("/potensi") ? "text-orange-500 font-bold" : ""
                 }`}
               >
                 Potensi
@@ -180,8 +190,8 @@ export default function Index() {
             <li>
               <Link
                 href="/kegiatan"
-                className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                  isActive("/kegiatan") ? "text-black font-bold" : ""
+                className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                  isActive("/kegiatan") ? "text-orange-500 font-bold" : ""
                 }`}
               >
                 Kegiatan
@@ -190,33 +200,21 @@ export default function Index() {
             <li>
               <Link
                 href="/berita"
-                className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                  isActive("/berita") ? "text-black font-bold" : ""
+                className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                  isActive("/berita") ? "text-orange-500 font-bold" : ""
                 }`}
               >
                 Berita
               </Link>
             </li>
-            {/* <li>
-                            <Link
-                                href="/kontak-kami"
-                                className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                                    isActive("/kontak-kami")
-                                        ? "text-black font-bold"
-                                        : ""
-                                }`}
-                            >
-                                Kontak Kami
-                            </Link>
-                        </li> */}
             <li>
               <Link
-                href="/produk-hukum"
-                className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-black lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${
-                  isActive("/kontak-kami") ? "text-black font-bold" : ""
+                href="/dasar-hukum"
+                className={`block py-2 px-3 text-gray-900 rounded lg:p-0 dark:text-white ${
+                  isActive("/dasar-hukum") ? "text-orange-500 font-bold" : ""
                 }`}
               >
-                Produk Hukum
+                Dasar Hukum
               </Link>
             </li>
           </ul>
