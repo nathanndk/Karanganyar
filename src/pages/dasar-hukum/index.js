@@ -74,9 +74,9 @@ export default function Index({ data, params }) {
       <div className="bg-gray-100">
         <div className="container mx-auto px-2 md:px-4 lg:px-20 py-6">
           <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center gap-4 mt-20">
-            <h1 className="text-3xl font-bold text-center text-orange-500">
-              Produk
-              <span className="text-black"> Hukum</span>
+            <h1 className="text-4xl font-bold text-orange-500">
+              Dasar
+              <span className="text-black"> Kelurahan</span>
             </h1>
 
             <div className="flex flex-row items-center gap-2 w-full md:w-auto">

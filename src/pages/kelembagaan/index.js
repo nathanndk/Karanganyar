@@ -57,8 +57,9 @@ export default function Index({ data, params }) {
       <div className="bg-gray-100">
         <div className="container mx-auto py-6 px-4 md:px-20">
           <div className="py-6 mt-12">
-            <h1 className="text-4xl font-bold text-orange-500 text-left">
-              Kelembagaan Kelurahan
+            <h1 className="text-4xl font-bold text-orange-500">
+              Kelembagaan
+              <span className="text-black"> Karanganyar</span>
             </h1>
             <p className="mt-2 text-lg text-gray-800 text-left">
               Kelembagaan yang terdapat di Kelurahan Karanganyar

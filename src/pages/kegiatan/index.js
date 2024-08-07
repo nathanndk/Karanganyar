@@ -66,12 +66,13 @@ export default function Index({ data, params }) {
       <Navbar />
       <div className="bg-gray-100">
         <div className="container mx-auto py-6 px-4 md:px-20">
-          <div className="py-6 mt-10">
-            <h1 className="text-4xl font-bold text-orange-500 text-left">
-              Kegiatan Desa
+          <div className="py-6 mt-12">
+            <h1 className="text-4xl font-bold text-orange-500">
+              Kegiatan
+              <span className="text-black"> Kelurahan</span>
             </h1>
             <p className="mt-2 text-lg text-gray-800 text-left">
-              Menyajikan informasi terbaru tentang kegiatan dan acara di Desa
+              Menyajikan informasi terbaru tentang kegiatan dan acara di Kelurahan
               Karanganyar
             </p>
           </div>

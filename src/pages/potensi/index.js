@@ -7,14 +7,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { Pagination } from "flowbite-react";
+import { TextInput, Pagination } from "flowbite-react";
+import { IconSearch } from "@tabler/icons-react";
 import truncate from "html-truncate";
 import CTA from "@/components/organism/Landing/CTA/Index";
 import Footer from "@/components/molekuls/Footer/Index";
 
 export default function Index({ data, params }) {
+  const [filter, setFilter] = useState(params);
   const Router = useRouter();
 
+  const onSearch = () => {
+    // add params to this page
+    Router.push({
+      pathname: "/potensi",
+      query: { search: filter.search },
+    });
+  };
   const onPageChange = (page) => {
     Router.push({
       pathname: "/potensi",
@@ -25,15 +34,15 @@ export default function Index({ data, params }) {
   return (
     <>
       <Head>
-        <title>Temukan Potensi | karanganyar</title>
+        <title>Temukan Potensi | Karanganyar</title>
         <meta name="description" content="Cari Potensi Desa Karanganyar" />
         <meta
           name="keywords"
           content="Potensi, ekonomi, sosial, budaya, desa, Karanganyar, Sragen, Jawa Tengah"
         />
-        <meta name="author" content="karanganyar" />
+        <meta name="author" content="Karanganyar" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Temukan Potensi | karanganyar" />
+        <meta property="og:title" content="Temukan Potensi | Karanganyar" />
         <meta
           property="og:description"
           content="Cari Potensi menarik dari Desa Karanganyar"
@@ -41,28 +50,28 @@ export default function Index({ data, params }) {
         <meta property="og:image" content="/images/visi-misi.jpg" />
         <meta
           property="og:url"
-          content="https://janjipraptiningsih.com/potensi"
+          content="https://janjipraptiningsih.com/Potensi"
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Temukan Potensi | karanganyar" />
+        <meta name="twitter:title" content="Temukan Potensi | Karanganyar" />
         <meta
           name="twitter:description"
           content="Cari Potensi menarik dan informatif tentang berbagai topik di sini. Temukan informasi yang Anda butuhkan dengan mudah."
         />
         <meta name="twitter:image" content="/images/visi-misi.jpg" />
-        <link rel="canonical" href="https://janjipraptiningsih.com/potensi" />
+        <link rel="canonical" href="https://janjipraptiningsih.com/Potensi" />
       </Head>
       <Navbar />
       <div className="bg-gray-100">
         <div className="container mx-auto py-6 px-4 md:px-20">
-          <div className="py-6 mt-10">
-            <h1 className="text-4xl font-bold text-orange-500 text-left">
-              Potensi Desa
+          <div className="py-6 mt-12">
+            <h1 className="text-4xl font-bold text-orange-500">
+              Potensi
+              <span className="text-black"> Karanganyar </span>
             </h1>
             <p className="mt-2 text-lg text-gray-800 text-left">
-              Menyajikan informasi terbaru tentang potensi ekonomi, sosial, dan
-              budaya dari Desa Karanganyar
+              Potensi di Kelurahan Karanganyar
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,7 +109,7 @@ export default function Index({ data, params }) {
           </div>
         </div>
       </div>
-      <CTA />
+      <CTA></CTA>
       <Footer data={data.footer} />
     </>
   );
@@ -117,7 +126,7 @@ export const getServerSideProps = async (context) => {
   params.page = parseInt(params.page) || 1;
   params.search = params.search || "";
 
-  const responsePotency = await api.get("/no-auth/gallery/list", { params });
+  const responsePotency = await api.get("/no-auth/gallery/list", params);
   const responseFooter = await api.get("/no-auth/footer/show/1");
 
   responsePotency.data.data.data.map((article) => {

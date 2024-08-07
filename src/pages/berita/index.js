@@ -68,11 +68,13 @@ export default function Index({ data, params }) {
       <div className="bg-gray-100">
         <div className="container mx-auto py-6 px-4 md:px-20">
           <div className="py-6 mt-12">
-            <h1 className="text-4xl font-bold text-orange-500 text-left">
+            <h1 className="text-4xl font-bold text-orange-500">
               Berita
+              <span className="text-black"> Terkini</span>
             </h1>
             <p className="mt-2 text-lg text-gray-800 text-left">
-              Menyajikan informasi terbaru tentang berbagai topik dan berita di Desa Karanganyar.
+              Menyajikan informasi terbaru tentang berbagai topik dan berita di
+              Kelurahan Karanganyar.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
