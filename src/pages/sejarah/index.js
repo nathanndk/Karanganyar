@@ -76,7 +76,7 @@ export const getServerSideProps = async () => {
       props: {
         data: {
           content: responseContent.data.data,
-          footer: responseFooter.data,
+          footer: responseFooter.data.data,
         },
       },
     };
