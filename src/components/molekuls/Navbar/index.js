@@ -115,6 +115,15 @@ export default function Index() {
                       Sejarah
                     </Dropdown.Item>
                   </Link>
+                  <Link href="/kondisi-geografis">
+                    <Dropdown.Item
+                      className={
+                        isActive("/kondisi-geografis") ? "text-orange-500 font-bold" : ""
+                      }
+                    >
+                      Kondisi Geografis
+                    </Dropdown.Item>
+                  </Link>
                 </Dropdown>
               </div>
             </li>

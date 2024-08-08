@@ -24,6 +24,7 @@ export default function Index({ data, params }) {
       query: { search: filter.search },
     });
   };
+
   const onPageChange = (page) => {
     Router.push({
       pathname: "/potensi",
@@ -80,21 +81,23 @@ export default function Index({ data, params }) {
                 href={`/potensi/detail?slug=${article.slug}`}
                 key={article.id}
               >
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <Image
-                    src={article.image.preview}
-                    alt={article.name}
-                    className="w-full object-cover h-64"
-                    width={500}
-                    height={280}
-                  />
-                  <div className="p-4">
-                    <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                  <div className="h-64">
+                    <Image
+                      src={article.image.preview}
+                      alt={article.name}
+                      className="w-full object-cover h-full"
+                      width={500}
+                      height={280}
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h2 className="text-xl text-center font-semibold text-gray-800 dark:text-white">
                       {article.name}
                     </h2>
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">
+                    {/* <p className="mt-2 text-gray-500 dark:text-gray-300">
                       {moment(article.created_at).format("LL")}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </Link>

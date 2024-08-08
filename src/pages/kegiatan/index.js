@@ -76,28 +76,30 @@ export default function Index({ data, params }) {
               Kelurahan Karanganyar
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.activities.data.map((activity) => (
               <Link
                 href={`/kegiatan/detail?slug=${activity.slug}`}
                 key={activity.id}
               >
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <Image
-                    src={activity.image.preview}
-                    alt={activity.name}
-                    className="w-full aspect-video object-cover rounded-t-lg"
-                    width={500}
-                    height={500}
-                  />
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold text-orange-500">
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                  <div className="aspect-video">
+                    <Image
+                      src={activity.image.preview}
+                      alt={activity.name}
+                      className="w-full h-full object-cover"
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h3 className="text-xl font-semibold text-gray-800">
                       {activity.name}
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-500">
                       {moment(activity.date).format("LL")}
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-500">
                       {moment(
                         moment(activity.date).format("YYYY-MM-DD") +
                           " " +
@@ -110,12 +112,13 @@ export default function Index({ data, params }) {
                           activity.end_time
                       ).format("LT")}
                     </p>
-                    <p className="text-gray-600">{activity.location}</p>
+                    <p className="text-gray-500">{activity.location}</p>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
+
           <div className="flex overflow-x-auto sm:justify-center">
             <Pagination
               currentPage={params.page}

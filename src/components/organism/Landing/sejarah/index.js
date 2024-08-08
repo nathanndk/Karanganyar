@@ -24,7 +24,7 @@ export default function Index() {
         <title>{article.name} | Karanganyar</title>
         <meta
           name="description"
-          content={`Sejarah Karanganyar - Temukan informasi menarik dan mendalam tentang topik ini. Baca artikel lengkapnya di sini.`}
+          content={`Sejarah Kabupaten Karanganyar dari era Kerajaan Mataram Kuno hingga masa kolonial Belanda. Baca lebih lanjut tentang sejarah dan warisan daerah ini.`}
         />
         <meta
           name="keywords"
@@ -38,7 +38,7 @@ export default function Index() {
         />
         <meta
           property="og:description"
-          content={`Sejarah Karanganyar - Temukan informasi menarik dan mendalam tentang topik ini. Baca artikel lengkapnya di sini.`}
+          content={`Sejarah Kabupaten Karanganyar dari era Kerajaan Mataram Kuno hingga masa kolonial Belanda. Baca lebih lanjut tentang sejarah dan warisan daerah ini.`}
         />
         <meta property="og:image" content={article.image.preview} />
         <meta
@@ -53,7 +53,7 @@ export default function Index() {
         />
         <meta
           name="twitter:description"
-          content={`Sejarah Karanganyar - Temukan informasi menarik dan mendalam tentang topik ini. Baca artikel lengkapnya di sini.`}
+          content={`Sejarah Kabupaten Karanganyar dari era Kerajaan Mataram Kuno hingga masa kolonial Belanda. Baca lebih lanjut tentang sejarah dan warisan daerah ini.`}
         />
         <meta name="twitter:image" content={article.image.preview} />
         <link
@@ -65,13 +65,13 @@ export default function Index() {
       <div className="bg-gray-100">
         <div className="container mx-auto py-8 px-4 md:px-20">
           <div className="flex flex-col gap-8 mt-20 lg:mt-10">
-            <h1 className="text-2xl lg:text-4xl font-bold mt-12 mb-5 text-center text-black dark:text-white">
+            <h1 className="text-2xl lg:text-4xl font-bold mt-12 text-center text-black dark:text-white">
               Sejarah <span className="text-orange-500">Karanganyar</span>
             </h1>
-            <div className="w-full overflow-hidden rounded-lg">
+            <div className="w-full overflow-hidden rounded-lg max-w-3xl mx-auto">
               <Image
                 src={article.image.preview}
-                alt="image"
+                alt="Sejarah Karanganyar"
                 layout="responsive"
                 width={800}
                 height={450}

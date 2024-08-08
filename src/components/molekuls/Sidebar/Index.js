@@ -221,7 +221,7 @@ export default function Index() {
               <span className="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                 <IconNews />
               </span>
-              Artikel
+              Berita
             </Link>
           </Sidebar.ItemGroup>
         </Sidebar.Items>

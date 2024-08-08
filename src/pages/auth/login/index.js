@@ -29,7 +29,7 @@ export default function Login() {
       if (response.status === 200) {
         Cookies.set("token", response.data.data.token);
         Cookies.set("user", JSON.stringify(response.data.data.profile));
-        router.push("/admin/sejarah");
+        router.push("/admin/artikel");
       } else {
         setError("Failed to login. Please check your credentials.");
       }

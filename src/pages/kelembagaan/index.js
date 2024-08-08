@@ -71,20 +71,22 @@ export default function Index({ data, params }) {
                 href={`/kelembagaan/detail?slug=${article.slug}`}
                 key={article.id}
               >
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <Image
-                    src={article.image.preview}
-                    alt={article.name}
-                    className="w-full object-cover h-64"
-                    width={500}
-                    height={280}
-                  />
-                  <div className="p-4">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                  <div className="h-64">
+                    <Image
+                      src={article.image.preview}
+                      alt={article.name}
+                      className="w-full object-cover h-full"
+                      width={500}
+                      height={280}
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col flex-grow">
                     <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
                       {article.name}
                     </h2>
                     <div
-                      className="prose prose-lg dark:prose-dark max-w-none"
+                      className="prose prose-lg dark:prose-dark max-w-none flex-grow"
                       dangerouslySetInnerHTML={{
                         __html: article.content,
                       }}
@@ -94,6 +96,7 @@ export default function Index({ data, params }) {
               </Link>
             ))}
           </div>
+
           <div className="flex overflow-x-auto sm:justify-center">
             <Pagination
               currentPage={params.page}
@@ -116,7 +119,7 @@ const truncateHtml = (html, maxLength) => {
 export const getServerSideProps = async (context) => {
   const params = context.query;
   params.category_code = "institution";
-  params.limit = params.limit || 3;
+  params.limit = params.limit || 9;
   params.page = parseInt(params.page) || 1;
   params.search = params.search || "";
 

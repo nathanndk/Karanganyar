@@ -7,12 +7,12 @@ import List from "@/components/organism/BaseCrud/List";
 import ArticleModels from "@/models/articles";
 
 export default function Home() {
-    return (
-        <>
-            <div className="bg-gray-100 dark:bg-gray-800">
-                <Sidebar />
-                <List models={ArticleModels} />
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="bg-gray-100 dark:bg-gray-800">
+        <Sidebar />
+        <List models={ArticleModels} />
+      </div>
+    </>
+  );
 }

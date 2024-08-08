@@ -27,7 +27,7 @@ export default function Index({ data }) {
                         width={500}
                         height={500}
                       />
-                      <h3 className="text-xl font-semibold text-orange-500">
+                      <h3 className="text-xl font-semibold text-black">
                         {activities.name}
                       </h3>
                       <p className="text-gray-600">
