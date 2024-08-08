@@ -4,7 +4,7 @@ import Router from "next/router";
 import Cookies from "js-cookie";
 // Membuat instance Axios dengan konfigurasi default
 
-const API_URL = "https://api.karangjati.byte-labs.tech";
+const API_URL = "https://api.karanganyar.byte-labs.tech";
 const axiosInterceptor = axios.create({
     baseURL: API_URL,
     timeout: 10000, // Timeout dalam milidetik

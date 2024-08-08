@@ -73,62 +73,14 @@ export default function Index({ data, params }) {
       <Navbar />
       <div className="bg-gray-100">
         <div className="container mx-auto px-2 md:px-4 lg:px-20 py-6">
-          <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center gap-4 mt-20">
+          <div className="py-6 mt-12">
             <h1 className="text-4xl font-bold text-orange-500">
               Dasar
-              <span className="text-black"> Kelurahan</span>
+              <span className="text-black"> Hukum</span>
             </h1>
-
-            <div className="flex flex-row items-center gap-2 w-full md:w-auto">
-              <div className="relative w-full">
-                <TextInput
-                  placeholder="Cari"
-                  value={filter.search}
-                  onChange={(e) => {
-                    setFilter({
-                      search: e.target.value,
-                    });
-                  }}
-                />
-                <div class="absolute top-0 end-0 flex h-full">
-                  {filter.search && (
-                    <Link
-                      href="/kegiatan"
-                      class="flex items-center pe-3"
-                      onClick={() => setFilter({ search: "" })}
-                    >
-                      <div>
-                        <svg
-                          class="w-3 h-3"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 14 14"
-                        >
-                          <path
-                            stroke="black"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                          />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                      </div>
-                    </Link>
-                  )}
-                </div>
-              </div>
-              <div>
-                <button
-                  href="#"
-                  className="inline-block flex flex-row items-center text-md h-10 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg px-4 py-2 h-auto"
-                  onClick={onSearch}
-                >
-                  <IconSearch />
-                </button>
-              </div>
-            </div>
+            <p className="mt-2 text-lg text-gray-800 text-left">
+              Dasar Hukum Kelurahan Karanganyar
+            </p>
           </div>
           <br />
           <br />

@@ -72,8 +72,8 @@ export default function Index({ data, params }) {
               <span className="text-black"> Kelurahan</span>
             </h1>
             <p className="mt-2 text-lg text-gray-800 text-left">
-              Menyajikan informasi terbaru tentang kegiatan dan acara di Kelurahan
-              Karanganyar
+              Menyajikan informasi terbaru tentang kegiatan dan acara di
+              Kelurahan Karanganyar
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
