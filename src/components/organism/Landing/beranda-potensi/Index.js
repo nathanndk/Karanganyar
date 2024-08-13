@@ -26,7 +26,7 @@ export default function Index({ data }) {
           <div className="w-full md:w-1/2 h-80 md:h-full flex items-center justify-center">
             <div className="relative w-full h-full">
               <Image
-                src="/images/kelurahan-karanganyar.jpg"
+                src="/images/taman-pancasila.jpeg"
                 alt="Potensi Kelurahan Karanganyar"
                 layout="intrinsic"
                 width={500}

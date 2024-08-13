@@ -83,13 +83,12 @@ export default function Index({ data, params }) {
                 key={activity.id}
               >
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
-                  <div className="aspect-video">
+                  <div className="w-full h-48 relative">
                     <Image
                       src={activity.image.preview}
                       alt={activity.name}
-                      className="w-full h-full object-cover"
-                      width={500}
-                      height={500}
+                      layout="fill"
+                      objectFit="cover"
                     />
                   </div>
                   <div className="p-4 flex flex-col flex-grow">

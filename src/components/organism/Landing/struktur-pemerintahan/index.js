@@ -121,7 +121,7 @@ const orgChartData = [
           },
           {
             name: "Elvin Norran Azra",
-            image: "",
+            image: "/images/struktur/ELVIN.jpeg",
             position: "Pelayanan Masyarakat",
           },
         ],

@@ -11,7 +11,7 @@ export default function Index({ data }) {
         </h1>
         <div className="px-4 md:px-16">
           <Image
-            src="/images/kelurahan-karanganyar.jpg"
+            src="/images/sejarah-karanganyar.jpg"
             alt="Kelurahan Karanganyar"
             width={800}
             height={500}
