@@ -56,7 +56,7 @@ export default function Index({ data }) {
             </h1>
             <div className="w-full overflow-hidden rounded-lg max-w-2xl mx-auto mb-8">
               <Image
-                src="/images/kelurahan-karanganyar.jpg" // Ensure this path is correct
+                src="/images/peta-karanganyar.jpg"
                 alt="Peta Kelurahan Karanganyar"
                 layout="responsive"
                 width={800}
