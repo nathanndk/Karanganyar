@@ -10,11 +10,11 @@ const products = {
     },
 
     url: {
-        list: "/admin/produk-hukum/",
-        create: "/admin/produk-hukum/tambah",
-        update: "/admin/produk-hukum/edit",
+        list: "/admin/dasar-hukum/",
+        create: "/admin/dasar-hukum/tambah",
+        update: "/admin/dasar-hukum/edit",
         delete: "/delete",
-        detail: "/admin/produk-hukum/detail",
+        detail: "/admin/dasar-hukum/detail",
     },
 
     actionConfig: {

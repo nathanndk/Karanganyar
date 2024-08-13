@@ -9,7 +9,7 @@ export default function Index() {
   const article = {
     name: "Sejarah Karanganyar",
     updated_at: "2024-08-07T00:00:00Z",
-    image: { preview: "/images/kelurahan-karanganyar.jpg" },
+    image: { preview: "/images/makam-nyiagengkarang.jpg" },
     content: `
       <p>Karanganyar adalah sebuah kabupaten di Provinsi Jawa Tengah, Indonesia. Kabupaten ini berbatasan dengan Kabupaten Sragen di utara, Kabupaten Grobogan di barat laut, Kabupaten Boyolali di barat, Kabupaten Sukoharjo di selatan, dan Provinsi Jawa Timur di timur.</p>
       <p>Sejarah Karanganyar dimulai dari era Kerajaan Mataram Kuno hingga masa kolonial Belanda. Banyak situs bersejarah yang dapat ditemukan di Karanganyar, seperti Candi Sukuh, Candi Cetho, dan berbagai peninggalan kolonial.</p>

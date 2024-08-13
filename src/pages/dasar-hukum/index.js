@@ -18,13 +18,13 @@ export default function Index({ data, params }) {
   const onSearch = () => {
     // add params to this page
     Router.push({
-      pathname: "/produk-hukum",
+      pathname: "/dasar-hukum",
       query: { search: filter.search },
     });
   };
   const onPageChange = (page) => {
     Router.push({
-      pathname: "/produk-hukum",
+      pathname: "/dasar-hukum",
       query: { ...params, page },
     });
   };
