@@ -120,7 +120,7 @@ const orgChartData = [
             position: "Bela Negara",
           },
           {
-            name: "Elvin Norran Azra",
+            name: "Elvin Norrivai Azra",
             image: "/images/struktur/ELVIN.jpeg",
             position: "Pelayanan Masyarakat",
           },
