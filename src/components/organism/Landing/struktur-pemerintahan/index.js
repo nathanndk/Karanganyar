@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import styled from "styled-components";
+import Image from "next/image";
 
 // Dynamic import for client-side rendering
 const Tree = dynamic(
@@ -23,12 +24,6 @@ const StyledNode = styled.div`
   width: 100px;
   max-width: 100%;
   word-wrap: break-word;
-
-  img {
-    border-radius: 12px;
-    width: 100%;
-    height: 125px;
-  }
 
   .name {
     font-weight: bold;
@@ -152,9 +147,14 @@ const OrganizationalChart = ({ data }) => (
     lineBorderRadius={"10px"}
     label={
       <StyledNode>
-        <img
+        <Image
           src={data.image || "/user_avatar_placeholder.png"}
           alt={data.name}
+          layout="intrinsic"
+          width={100}
+          height={125}
+          objectFit="cover"
+          className="rounded-lg"
         />
         <div className="name">{data.name}</div>
         <div className="position">{data.position}</div>
@@ -167,9 +167,14 @@ const OrganizationalChart = ({ data }) => (
           key={index}
           label={
             <StyledNode>
-              <img
+              <Image
                 src={child.image || "/user_avatar_placeholder.png"}
                 alt={child.name}
+                layout="intrinsic"
+                width={100}
+                height={125}
+                objectFit="cover"
+                className="rounded-lg"
               />
               <div className="name">{child.name}</div>
               <div className="position">{child.position}</div>
@@ -182,9 +187,14 @@ const OrganizationalChart = ({ data }) => (
                 key={index}
                 label={
                   <StyledNode>
-                    <img
+                    <Image
                       src={grandChild.image || "/user_avatar_placeholder.png"}
                       alt={grandChild.name}
+                      layout="intrinsic"
+                      width={100}
+                      height={125}
+                      objectFit="cover"
+                      className="rounded-lg"
                     />
                     <div className="name">{grandChild.name}</div>
                     <div className="position">{grandChild.position}</div>
@@ -197,51 +207,6 @@ const OrganizationalChart = ({ data }) => (
   </Tree>
 );
 
-// const AdditionalInfo = ({ data }) => {
-//   const members = extractMembers(data);
-
-//   return (
-//     <div className="mt-8 px-4 md:px-16">
-//       <h2 className="text-xl lg:text-2xl font-bold text-center text-black dark:text-white">
-//         Informasi Tambahan
-//       </h2>
-//       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-//         {members.map((member, index) => (
-//           <div
-//             key={index}
-//             className="flex items-center rounded-lg shadow-md bg-white p-4"
-//           >
-//             <div className="w-1/3 h-full">
-//               <img
-//                 src={member.image || "/user_avatar_placeholder.png"}
-//                 alt={member.name}
-//                 className="rounded-lg h-full w-full object-cover"
-//               />
-//             </div>
-//             <div className="w-2/3 pl-4">
-//               <p className="font-semibold text-lg">{member.name}</p>
-//               <p className="text-sm text-gray-600 dark:text-gray-300">
-//                 {member.position}
-//               </p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// Function to extract all members
-const extractMembers = (data, members = []) => {
-  members.push({ name: data.name, position: data.position, image: data.image });
-
-  if (data.children) {
-    data.children.forEach((child) => extractMembers(child, members));
-  }
-
-  return members;
-};
-
 export default function Index() {
   return (
     <div className="bg-gray-100">
@@ -252,7 +217,6 @@ export default function Index() {
         <div className="overflow-x-auto">
           <OrganizationalChart data={orgChartData[0]} />
         </div>
-        {/* <AdditionalInfo data={orgChartData[0]} /> */}
       </div>
     </div>
   );

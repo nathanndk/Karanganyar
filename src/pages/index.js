@@ -75,7 +75,7 @@ export const getServerSideProps = async () => {
   responseArticles.data.data.data.map((article) => {
     article.content = truncateHtml(article.content, 180);
   });
-  
+
   const data = {
     // hero: responseHero.data.data,
     // about: responseAbout.data.data,
