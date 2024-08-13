@@ -5,30 +5,6 @@ import moment from "moment";
 import "moment/locale/id";
 
 export default function Index({ data }) {
-  // const articles = [
-  //     {
-  //         title: "Lomba Memasak Kelurahan Karanganyar",
-  //         date: "2024-02-20",
-  //         image: "/images/Hero.jpeg", // Ensure this path is correct
-  //         author: "Sgit Kusmantoro",
-  //         views: 444,
-  //     },
-  //     {
-  //         title: "PIN POLID 2",
-  //         date: "2024-02-19",
-  //         image: "/images/Hero.jpeg", // Ensure this path is correct
-  //         author: "Sgit Kusmantoro",
-  //         views: 297,
-  //     },
-  //     {
-  //         title: "Pendistribusian Kotak Suara Pemilu 2024",
-  //         date: "2024-02-12",
-  //         image: "/images/Hero.jpeg", // Ensure this path is correct
-  //         author: "Sgit Kusmantoro",
-  //         views: 209,
-  //     },
-  // ];
-
   return (
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto px-6 md:px-20">
@@ -41,7 +17,7 @@ export default function Index({ data }) {
           </p>
         </div>
         <div className="space-y-8">
-          {data.map((article, index) => (
+          {data.slice(0, 4).map((article, index) => (
             <Link key={index} href={`/berita/detail?slug=${article.slug}`}>
               <div className="flex flex-col md:flex-row items-start bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 mb-4">
                 <div className="relative w-full md:w-1/3 h-48">
@@ -71,9 +47,6 @@ export default function Index({ data }) {
                       {moment(article.created_at).format("LL")}
                     </span>
                   </div>
-                  {/* <p className="text-gray-500 dark:text-gray-400">
-                                        Dilihat {article.views} kali
-                                    </p> */}
                 </div>
               </div>
             </Link>
