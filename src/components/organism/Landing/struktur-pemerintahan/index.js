@@ -68,7 +68,7 @@ const orgChartData = [
     position: "Lurah Karanganyar",
     children: [
       {
-        name: "Sri Hangrawity Suwismorini, SH.MM",
+        name: "Sri Hangrawiti Suwismorini, SH.MM",
         image: "/images/struktur/SRI_SULAMI.jpg",
         position: "Sekretaris",
         children: [
@@ -100,7 +100,7 @@ const orgChartData = [
         position: "Kasi Pemerintahan",
         children: [
           {
-            name: "Candra D, S.Pd",
+            name: "Candra Damayanti, S. Pd",
             image: "/images/struktur/CANDRA_DAMAYANTI.jpeg",
             position: "Administrasi Umum",
           },
@@ -132,7 +132,7 @@ const orgChartData = [
         position: "Kasi Kesejahteraan Sosial",
       },
       {
-        name: "Sularyo, S.Sos",
+        name: "Sularso, S.Sos",
         image: "",
         position: "Kasi Kesejahteraan Sosial",
       },
