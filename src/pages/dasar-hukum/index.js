@@ -31,23 +31,20 @@ export default function Index({ data, params }) {
   return (
     <>
       <Head>
-        <title>Apa yang Kami Lakukan | karangjatih</title>
+        <title>Dasar Hukum | Karanganyar </title>
         <meta
           name="description"
-          content="Pelajari tentang apa yang dilakukan oleh karangjatih, konsep, pendekatan, dan kegiatan terbaru yang dijalankan untuk pengembangan komunitas di Indonesia."
+          content="Pelajari tentang apa yang dilakukan oleh Karanganyar, konsep, pendekatan, dan kegiatan terbaru yang dijalankan untuk pengembangan komunitas di Indonesia."
         />
         <meta
           name="keywords"
-          content="karangjatih, apa yang kami lakukan, konsep, pendekatan, kegiatan, pengembangan komunitas, Indonesia"
+          content="Karanganyar, apa yang kami lakukan, konsep, pendekatan, kegiatan, pengembangan komunitas, Indonesia"
         />
-        <meta name="author" content="Tim karangjatih" />
-        <meta
-          property="og:title"
-          content="Apa yang Kami Lakukan | karangjatih"
-        />
+        <meta name="author" content="Tim Karanganyar" />
+        <meta property="og:title" content="Dasar Hukum | Karanganyar " />
         <meta
           property="og:description"
-          content="Pelajari tentang apa yang dilakukan oleh karangjatih, konsep, pendekatan, dan kegiatan terbaru yang dijalankan untuk pengembangan komunitas di Indonesia."
+          content="Pelajari tentang apa yang dilakukan oleh Karanganyar, konsep, pendekatan, dan kegiatan terbaru yang dijalankan untuk pengembangan komunitas di Indonesia."
         />
         <meta property="og:url" content="https://janjipraptiningsih.com" />
         <meta property="og:type" content="website" />
@@ -55,15 +52,12 @@ export default function Index({ data, params }) {
           property="og:image"
           content="https://janjipraptiningsih.com/path-to-image.jpg"
         />
-        <meta property="og:site_name" content="karangjatih" />
+        <meta property="og:site_name" content="Karanganyar" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Apa yang Kami Lakukan | karangjatih"
-        />
+        <meta name="twitter:title" content="Dasar Hukum | Karanganyar " />
         <meta
           name="twitter:description"
-          content="Pelajari tentang apa yang dilakukan oleh karangjatih, konsep, pendekatan, dan kegiatan terbaru yang dijalankan untuk pengembangan komunitas di Indonesia."
+          content="Pelajari tentang apa yang dilakukan oleh Karanganyar, konsep, pendekatan, dan kegiatan terbaru yang dijalankan untuk pengembangan komunitas di Indonesia."
         />
         <meta
           name="twitter:image"
