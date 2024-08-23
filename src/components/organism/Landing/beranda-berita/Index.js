@@ -16,7 +16,7 @@ export default function Index({ data }) {
             Dapatkan berita terbaru dan informasi menarik dari kami
           </p>
         </div>
-        <div className="space-y-8">
+        <div className="space-y-6">
           {data.slice(0, 4).map((article, index) => (
             <Link key={index} href={`/berita/detail?slug=${article.slug}`}>
               <div className="flex flex-col md:flex-row items-start bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 mb-4">
@@ -31,18 +31,16 @@ export default function Index({ data }) {
                   />
                 </div>
                 <div className="w-full md:w-2/3 p-4 md:p-6">
-                  <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                  <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-1 overflow-hidden text-ellipsis line-clamp-2">
                     {article.name}
                   </h2>
-                  {/* render content */}
                   <div
-                    className="prose prose-lg dark:prose-dark max-w-none text-gray-500"
+                    className="prose prose-sm dark:prose-dark max-w-none text-gray-500 line-clamp-2"
                     dangerouslySetInnerHTML={{
                       __html: article.content,
                     }}
                   ></div>
-                  <br />
-                  <div className="text-gray-500 dark:text-gray-400 mb-2">
+                  <div className="text-gray-500 dark:text-gray-400 mt-2 text-sm">
                     <span className="block">
                       {moment(article.created_at).format("LL")}
                     </span>
