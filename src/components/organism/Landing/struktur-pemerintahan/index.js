@@ -89,14 +89,14 @@ const orgChartData = [
           },
           {
             name: "Sunarto",
-            image: "/images/struktur/SUNARTO.JPG",
+            image: "/images/struktur/SUNARTO.jpg",
             position: "Penjaga dan Kebersihan",
           },
         ],
       },
       {
         name: "Marjiyatno, SH",
-        image: "/images/struktur/MARJIYATNO.JPG",
+        image: "/images/struktur/MARJIYATNO.jpg",
         position: "Kasi Pemerintahan",
         children: [
           {
@@ -111,7 +111,7 @@ const orgChartData = [
           },
           {
             name: "Sugiyono",
-            image: "/images/struktur/SUGIYONO.JPG",
+            image: "/images/struktur/SUGIYONO.jpg",
             position: "Administrasi Lingkungan Hidup",
           },
           {

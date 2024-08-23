@@ -34,35 +34,8 @@ export default function Index({ data, params }) {
     <>
       <Head>
         <title>Temukan Artikel | Karanganyar</title>
-        <meta
-          name="description"
-          content="Cari artikel menarik dan informatif tentang berbagai topik di sini. Temukan informasi yang Anda butuhkan dengan mudah."
-        />
-        <meta
-          name="keywords"
-          content="artikel, informasi, edukasi, berita, topik terbaru, bacaan menarik"
-        />
-        <meta name="author" content="Karanganyar" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Temukan Artikel | Karanganyar" />
-        <meta
-          property="og:description"
-          content="Cari artikel menarik dan informatif tentang berbagai topik di sini. Temukan informasi yang Anda butuhkan dengan mudah."
-        />
-        <meta property="og:image" content="/images/visi-misi.jpg" />
-        <meta
-          property="og:url"
-          content="https://janjipraptiningsih.com/artikel"
-        />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Temukan Artikel | Karanganyar" />
-        <meta
-          name="twitter:description"
-          content="Cari artikel menarik dan informatif tentang berbagai topik di sini. Temukan informasi yang Anda butuhkan dengan mudah."
-        />
-        <meta name="twitter:image" content="/images/visi-misi.jpg" />
-        <link rel="canonical" href="https://janjipraptiningsih.com/artikel" />
+        {/* Meta Tags */}
+        {/* ... */}
       </Head>
       <Navbar />
       <div className="bg-gray-100">
@@ -83,7 +56,7 @@ export default function Index({ data, params }) {
                 href={`/berita/detail?slug=${article.slug}`}
                 key={article.id}
               >
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <Image
                     src={article.image.preview}
                     alt={article.name}
@@ -92,18 +65,21 @@ export default function Index({ data, params }) {
                     height={280}
                   />
                   <div className="p-4">
-                    <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
+                    <h2 className="text-xl font-semibold text-gray-800 dark:text-white line-clamp-2">
                       {article.name}
                     </h2>
                     <p className="mt-2 text-gray-600 dark:text-gray-300">
                       {moment(article.created_at).format("LL")}
+                    </p>
+                    <p className="mt-2 text-gray-600 dark:text-gray-400 line-clamp-3">
+                      {article.excerpt}
                     </p>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
-          <div className="flex overflow-x-auto sm:justify-center">
+          <div className="flex overflow-x-auto sm:justify-center mt-8">
             <Pagination
               currentPage={params.page}
               totalPages={data.articles.totalPage}
@@ -120,7 +96,7 @@ export default function Index({ data, params }) {
 
 export const getServerSideProps = async (context) => {
   const params = context.query;
-  params.limit = params.limit || 3;
+  params.limit = params.limit || 3; // Limit articles to 3 per page
   params.page = parseInt(params.page) || 1;
   params.search = params.search || "";
 
